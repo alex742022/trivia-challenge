@@ -1,1 +1,5 @@
+# ignore defendencies
 /node_modules
+
+# ignore next.js
+/.next
