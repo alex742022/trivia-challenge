@@ -11,23 +11,24 @@ export default function QuestionsContainer({ results }) {
   const [currentQuestions, setCurrentQuestions] = useState(0);
   // this is state numbers that hold a scores
   const [score, setScores] = useState(0);
-
+  console.log(`Scores ${score}`);
   console.log(currentQuestions);
   const handleAnswer = (answer) => {
     //to changed the questions
     currentQuestions + 1 < results.length &&
       setCurrentQuestions(currentQuestions + 1);
+    answer === results[currentQuestions].correct_answer && setScores(score + 1);
   };
   return (
-    <div className="w-[900px] h-[700px] bg-white px-[50px] py-[30px]">
+    <div className="w-[900px] h-[800px] bg-white px-[50px] py-[30px]">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-[20px]">
           <Image
             src="/../public/images/logo/logo_zeniark2.png"
-            width={80}
-            height={60}
+            width={100}
+            height={100}
             alt="Logo"
-            className="w-auto"
+            className="w-[80px]"
           />
           <h2>Category:{results[currentQuestions].category}</h2>
         </div>
