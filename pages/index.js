@@ -9,8 +9,8 @@ export default function HomeScreen() {
   const { results } = DataofTrivia;
   const lengthOfArray = results.length;
   return (
-    <div>
-      <div className="bg-white max-w-[900px] mx-auto p-[20px] flex flex-col items-center rounded-lg ">
+    <>
+      <div className="bg-white max-w-[800px] mx-auto mt-[100px] p-[20px] flex flex-col items-center rounded-lg ">
         <Image
           src={Logo}
           alt="Logo"
@@ -21,20 +21,24 @@ export default function HomeScreen() {
         <h1 className="text-[30px] text-center font-[700] mt-[20px]">
           Welcome to the Trivia Challenge!
         </h1>
-        <p className="font-semibold">
+        <p className="font-semibold text-center mt-[10px]">
           You will be presented with {lengthOfArray} True or False questions.
         </p>
-        <div className="px-[20px] py-[10px] brandColor1 text-white text-[20px] mt-[40px] rounded-lg">
+        <div className="px-[20px] py-[10px] brandColorBackground text-white text-[20px] mt-[40px] rounded-lg">
           Can you score {lengthOfArray}/{lengthOfArray}?
         </div>
+        <div className="flex flex-col items-center">
         <Link
           href="/questions"
-          className="uppercase text-[brandColor1] text-[25px] mt-[20px]"
+          className="uppercase brandColorText text-[25px] mt-[20px]"
         >
           Lets start!
         </Link>
+        <div className="w-[160px] h-[2px] brandColorBackground"></div>
+        </div>
+       
       </div>
-    </div>
+    </>
   );
 }
 
