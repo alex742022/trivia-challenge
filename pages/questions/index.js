@@ -2,7 +2,7 @@
 import Questions from "../../components/questions-container";
 // imported the json file
 import DataQuestions from "../api/test-questions.json"
-export default function QuestionsPage({DataQuestions}) {
+export default function QuestionsPage() {
   //destructur
   const { results } = DataQuestions;
   return <Questions results={results}/>;
@@ -10,15 +10,15 @@ export default function QuestionsPage({DataQuestions}) {
 
 //SSR
 //fetch the json data
-export async function getServerSideProps() {
-  if (!DataQuestions) {
-    return {
-      props: {},
-    };
-  }
-  return {
-    props: {
-      DataQuestions,
-    },
-  };
-}
+// export async function getServerSideProps() {
+//   if (!DataQuestions) {
+//     return {
+//       props: {},
+//     };
+//   }
+//   return {
+//     props: {
+//       DataQuestions,
+//     },
+//   };
+// }
