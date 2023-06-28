@@ -11,23 +11,32 @@ import he from "he";
 
 // "results" came from questions file which have a data array
 export default function QuestionsContainer({ results }) {
+
   // this state is to display the index of array results
   const [currentQuestions, setCurrentQuestions] = useState(0);
   // this is state numbers that hold a scores
   const [score, setScores] = useState(0);
-
+  //this state store all the array for the answered 
+  // of user then will pass into ShowResults to compare it to result array
+  //to see the final result
+  const [answerOfUser, setAnswerOfUser] = useState([])
+console.log(answerOfUser)
   // this function is for the button of true or false
   const handleAnswer = (answer) => {
     //to changed the questions
     currentQuestions + 1 < results.length &&
       setCurrentQuestions(currentQuestions + 1);
     answer === results[currentQuestions].correct_answer && setScores(score + 1);
+    // this state is to push an answer of user
+    setAnswerOfUser(prevAnswer =>[...prevAnswer, answer])
   };
+
+
 console.log(score)
   // this jsx have an condition
   // if  the currentQuestions is equall into the array length of results then the first one is execute
   return currentQuestions + 1 === results.length ? (
-    <ShowResults showResults={score} lengthOfArray={results.length}/>
+    <ShowResults showResults={score} lengthOfArray={results.length} allDataResults={results} answeredOfUser={answerOfUser}/>
   ) : (
     <div className="max-w-[800px] mx-auto bg-white px-[15px] sm:px-[40px] py-[30px] mt-[100px]">
       <div className="flex justify-between items-center">
