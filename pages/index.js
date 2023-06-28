@@ -10,7 +10,7 @@ export default function HomeScreen() {
   const lengthOfArray = results.length;
   return (
     <>
-      <div className="bg-white max-w-[800px] mx-auto mt-[100px] p-[20px] flex flex-col items-center rounded-lg ">
+      <div className="bg-white max-w-[700px] mx-auto mt-[100px] p-[20px] flex flex-col items-center rounded-lg ">
         <Image
           src={Logo}
           alt="Logo"
