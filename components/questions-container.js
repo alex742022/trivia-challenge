@@ -20,7 +20,7 @@ export default function QuestionsContainer({ results }) {
   // of user then will pass into ShowResults to compare it to result array
   //to see the final result
   const [answerOfUser, setAnswerOfUser] = useState([])
-console.log(answerOfUser)
+
   // this function is for the button of true or false
   const handleAnswer = (answer) => {
     //to changed the questions
@@ -31,8 +31,6 @@ console.log(answerOfUser)
     setAnswerOfUser(prevAnswer =>[...prevAnswer, answer])
   };
 
-
-console.log(score)
   // this jsx have an condition
   // if  the currentQuestions is equall into the array length of results then the first one is execute
   return currentQuestions + 1 === results.length ? (
