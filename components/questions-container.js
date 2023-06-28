@@ -23,7 +23,7 @@ export default function QuestionsContainer({ results }) {
       setCurrentQuestions(currentQuestions + 1);
     answer === results[currentQuestions].correct_answer && setScores(score + 1);
   };
-
+console.log(score)
   // this jsx have an condition
   // if  the currentQuestions is equall into the array length of results then the first one is execute
   return currentQuestions + 1 === results.length ? (
@@ -67,7 +67,7 @@ export default function QuestionsContainer({ results }) {
           <button className="text-[20px]">True</button>
         </div>
         <div
-          onClick={() => handleAnswer("True")}
+          onClick={() => handleAnswer("False")}
           className="bg-[red] py-[10px] flex items-center gap-[15px] w-[150px] h-[60px] justify-center rounded-lg"
         >
           <Image
