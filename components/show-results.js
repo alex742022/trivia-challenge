@@ -7,9 +7,9 @@ export default function FinalResultsContainer({ showResults }) {
     setShowNotif(false);
   };
   return showNotif ? (
-    <div className="w-[900px] bg-white mx-auto">
+    <div className="max-w-[400px] bg-white mx-auto mt-[100px] py-[20px] flex flex-col items-center justify-center gap-[20px]">
       <h1 className="text-[20px]">Your Done!</h1>
-      <button onClick={showTheResult} className="text-[50px]">
+      <button onClick={showTheResult} className="text-[20px] brandColorBackground text-white py-[10px] px-[30px] rounded-lg">
         Show the result
       </button>
     </div>
