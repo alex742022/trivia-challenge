@@ -1,7 +1,17 @@
+import { useState } from "react";
 import Image from "next/image";
 import CheckIcon from "../public/images/icons/check.svg";
 import XIcon from "../public/images/icons/xmark.svg";
-export default function QuestionsContainer() {
+
+export default function QuestionsContainer({ results }) {
+  const [currentQuestions, setCurrentQuestions] = useState(0);
+  const [score, setScores] = useState(0);
+  console.log(currentQuestions);
+  const handleAnswer = (answer) => {
+    currentQuestions + 1 < results.length &&
+      setCurrentQuestions(currentQuestions + 1);
+  };
+  console.log(results);
   return (
     <div className="w-[900px] h-[700px] bg-white px-[50px] py-[30px]">
       <div className="flex justify-between items-center">
@@ -13,14 +23,16 @@ export default function QuestionsContainer() {
             alt="Logo"
             className="w-auto"
           />
-          <h2>Category:</h2>
+          <h2>Category:{results[currentQuestions].category}</h2>
         </div>
-        <div>1 of 10</div>
+        <div>
+          {currentQuestions + 1} of {results.length}
+        </div>
       </div>
       <hr className="h-[2px] my-[20px]" />
       <div className="m-auto w-[70%] h-[400px] bg-slate-200 flex items-center">
         <h1 className="text-[50px] text-center">
-          Green is almost as big as Africa.
+          {results[currentQuestions].question}
         </h1>
       </div>
       <hr className="h-[2px] my-[20px]" />
@@ -33,7 +45,7 @@ export default function QuestionsContainer() {
             alt="checkIcon"
             className="w-auto"
           />
-          <button>True</button>
+          <button onClick={() => handleAnswer("True")}>True</button>
         </div>
         <div className="bg-[red] py-[10px] flex items-center gap-[15px] w-[100px] justify-center rounded-lg">
           <Image
@@ -43,7 +55,7 @@ export default function QuestionsContainer() {
             alt="checkIcon"
             className="w-auto"
           />
-          <button>False</button>
+          <button onClick={() => handleAnswer("False")}>False</button>
         </div>
       </div>
     </div>
