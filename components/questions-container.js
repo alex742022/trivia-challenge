@@ -46,7 +46,7 @@ export default function QuestionsContainer({ results }) {
         </small>
       </div>
       <hr className="h-[2px] my-[20px]" />
-      <div className="m-auto max-w-[600px]] h-[400px] bg-slate-200 flex justify-center items-center p-[20px]">
+      <div className="m-auto max-w-[600px]] h-[300px] bg-slate-200 flex justify-center items-center p-[20px]">
         <h1 className="text-[30px] text-center sm:text-[40px]">
           {he.decode(results[currentQuestions].question)}
         </h1>
