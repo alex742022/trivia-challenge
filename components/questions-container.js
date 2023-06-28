@@ -5,7 +5,7 @@ import CheckIcon from "../public/images/icons/check.svg";
 import XIcon from "../public/images/icons/xmark.svg";
 // imported this component to pass a final results
 import ShowResults from "./show-results";
-import Logo2 from "../public/images/icons/logo_zeniark2.png"
+import Logo2 from "../public/images/logo/logo_zeniark2.png";
 
 // "results" came from questions file which have a data array
 export default function QuestionsContainer({ results }) {
