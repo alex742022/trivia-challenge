@@ -1,7 +1,9 @@
 import Image from "next/image";
 // use for decode the intity
-import he from "he"
+import he from "he";
 import Logo2 from "../public/images/logo/logo_zeniark2.png";
+import CheckIcon from "../public/images/icons/check-green.svg";
+import XIcon from "../public/images/icons/xmark-red.svg";
 //these all property are came from show-results component"
 export default function FinalScore({
   finalScore,
@@ -30,16 +32,52 @@ export default function FinalScore({
       </div>
 
       <div>
-        {allDataResults.map(({correct_answer, question}, index) => {
+        {allDataResults.map(({ correct_answer, question }, index) => {
           return (
             <div className="my-[10px]">
               <hr className="h-[2px]" />
-              <p>{index + 1}. {he.decode(question)}</p>
-              <div className="flex gap-[10px]">
-              <small className="italic">The correct answer is <span className={correct_answer === "True" ? `text-[green]` : `text-[red]`}>{correct_answer}.</span></small>
-              <small className="italic">Your answer is <span className={answeredOfUser[index] === "True" ? `text-[green]` : `text-[red]`}>{answeredOfUser[index]}.</span></small>
+              <div className="flex justify-between gap-[20px] items-center">
+                <div className="w-[80%]">
+                  <p className="text-[14px]">
+                    {index + 1}. {he.decode(question)}
+                  </p>
+                  <div className="flex gap-[10px]">
+                    <small className="italic">
+                      The correct answer is
+                      <span
+                        className={`${
+                          correct_answer === "True"
+                            ? `text-[green]`
+                            : `text-[red]`
+                        } ml-[5px]`}
+                      >
+                        {correct_answer}.
+                      </span>
+                    </small>
+                    <small className="italic">
+                      Your answer is
+                      <span
+                        className={`${
+                          answeredOfUser[index] === "True"
+                            ? `text-[green]`
+                            : `text-[red]`
+                        } ml-[5px]`}
+                      >
+                        {answeredOfUser[index]}.
+                      </span>
+                    </small>
+                  </div>
+                </div>
+                <div>
+                  <Image
+                    src={answeredOfUser[index] === correct_answer ? CheckIcon : XIcon}
+                    width={30}
+                    height={30}
+                    alt={answeredOfUser[index] === correct_answer ? "Check" : "Wrong"}
+                    className="w-[20px]"
+                  />
+                </div>
               </div>
-            
             </div>
           );
         })}
