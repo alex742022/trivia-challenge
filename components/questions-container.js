@@ -29,7 +29,7 @@ export default function QuestionsContainer({ results }) {
   return currentQuestions + 1 === results.length ? (
     <ShowResults showResults={score} />
   ) : (
-    <div className="max-w-[800px] mx-auto bg-white px-[50px] py-[30px]">
+    <div className="max-w-[800px] mx-auto bg-white px-[50px] py-[30px] mt-[100px]">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-[20px]">
           <Image
