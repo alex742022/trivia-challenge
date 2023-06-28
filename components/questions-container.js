@@ -46,16 +46,16 @@ export default function QuestionsContainer({ results }) {
         </div>
       </div>
       <hr className="h-[2px] my-[20px]" />
-      <div className="m-auto max-w-[600px]] h-[400px] bg-slate-200 flex items-center p-[20px]">
-        <h1 className="text-[30px] text-center ">
-        {he.decode(results[currentQuestions].question)}
+      <div className="m-auto max-w-[600px]] h-[400px] bg-slate-200 flex justify-center items-center p-[20px]">
+        <h1 className="text-[30px] text-center sm:text-[40px]">
+          {he.decode(results[currentQuestions].question)}
         </h1>
       </div>
       <hr className="h-[2px] my-[20px]" />
       <div className="text-white flex gap-[40px] justify-center">
         <div
           onClick={() => handleAnswer("True")}
-          className="bg-[green] py-[10px] flex items-center gap-[15px] w-[100px] justify-center rounded-lg"
+          className="bg-[green] py-[10px] flex items-center gap-[15px] w-[150px] justify-center rounded-lg"
         >
           <Image
             src={CheckIcon}
@@ -64,20 +64,20 @@ export default function QuestionsContainer({ results }) {
             alt="checkIcon"
             className="w-auto"
           />
-          <button>True</button>
+          <button className="text-[20px]">True</button>
         </div>
         <div
           onClick={() => handleAnswer("True")}
-          className="bg-[red] py-[10px] flex items-center gap-[15px] w-[100px] justify-center rounded-lg"
+          className="bg-[red] py-[10px] flex items-center gap-[15px] w-[150px] h-[60px] justify-center rounded-lg"
         >
           <Image
             src={XIcon}
-            width={20}
-            height={20}
+            width={30}
+            height={30}
             alt="checkIcon"
             className="w-auto"
           />
-          <button onClick={() => handleAnswer("False")}>False</button>
+          <button className="text-[20px]">False</button>
         </div>
       </div>
     </div>
