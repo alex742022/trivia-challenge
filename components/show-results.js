@@ -11,7 +11,7 @@ export default function FinalResultsContainer({ showResults }) {
       <button onClick={showTheResult}>Show the result</button>
     </div>
   ) : (
-    //past the property into finala result page
+    //past the property into finala result
    <FinalResults finalScore={showResults}/>
   );
 }
