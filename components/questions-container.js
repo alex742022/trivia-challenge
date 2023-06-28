@@ -29,7 +29,7 @@ export default function QuestionsContainer({ results }) {
   return currentQuestions + 1 === results.length ? (
     <ShowResults showResults={score} />
   ) : (
-    <div className="w-[900px] h-[800px] bg-white px-[50px] py-[30px]">
+    <div className="max-w-[800px] mx-auto bg-white px-[50px] py-[30px]">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-[20px]">
           <Image
@@ -46,8 +46,8 @@ export default function QuestionsContainer({ results }) {
         </div>
       </div>
       <hr className="h-[2px] my-[20px]" />
-      <div className="m-auto w-[70%] h-[400px] bg-slate-200 flex items-center">
-        <h1 className="text-[50px] text-center">
+      <div className="m-auto max-w-[600px]] h-[400px] bg-slate-200 flex items-center p-[20px]">
+        <h1 className="text-[30px] text-center ">
         {he.decode(results[currentQuestions].question)}
         </h1>
       </div>
