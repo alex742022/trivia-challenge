@@ -11,8 +11,9 @@ Ensure that you have a GitHub account to clone this code.
 Open your terminal or command prompt.
 
 Clone the repository using the following command:
-
+```bash
 git clone https://github.com/your-username/repository-name.git
+```
 Replace your-username with your GitHub username and repository-name with the name of the project's repository.
 
 Navigate to the project's directory:
