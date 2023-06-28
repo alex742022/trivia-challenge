@@ -7,11 +7,14 @@ export default function FinalResultsContainer({ showResults }) {
     setShowNotif(false);
   };
   return showNotif ? (
-    <div>
-      <button onClick={showTheResult}>Show the result</button>
+    <div className="w-[900px] bg-white mx-auto">
+      <h1 className="text-[20px]">Your Done!</h1>
+      <button onClick={showTheResult} className="text-[50px]">
+        Show the result
+      </button>
     </div>
   ) : (
     //past the property into finala result
-   <FinalResults finalScore={showResults}/>
+    <FinalResults finalScore={showResults} />
   );
 }
