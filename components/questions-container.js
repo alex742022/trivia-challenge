@@ -5,6 +5,7 @@ import CheckIcon from "../public/images/icons/check.svg";
 import XIcon from "../public/images/icons/xmark.svg";
 // imported this component to pass a final results
 import ShowResults from "./show-results";
+import Logo2 from "../public/images/icons/logo_zeniark2.png"
 
 // "results" came from questions file which have a data array
 export default function QuestionsContainer({ results }) {
@@ -30,7 +31,7 @@ export default function QuestionsContainer({ results }) {
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-[20px]">
           <Image
-            src="/../public/images/logo/logo_zeniark2.png"
+            src={Logo2}
             width={100}
             height={100}
             alt="Logo"
