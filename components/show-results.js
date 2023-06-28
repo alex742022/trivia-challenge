@@ -1,7 +1,7 @@
 // imported the final-results file
 import FinalResults from "../pages/final-results";
 import { useState } from "react";
-export default function FinalResultsContainer({ showResults }) {
+export default function FinalResultsContainer({ showResults, lengthOfArray }) {
   const [showNotif, setShowNotif] = useState(true);
   const showTheResult = () => {
     setShowNotif(false);
@@ -15,6 +15,6 @@ export default function FinalResultsContainer({ showResults }) {
     </div>
   ) : (
     //past the property into finala result
-    <FinalResults finalScore={showResults} />
+    <FinalResults finalScore={showResults} lengthOfArray={lengthOfArray} />
   );
 }

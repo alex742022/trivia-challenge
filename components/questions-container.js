@@ -27,7 +27,7 @@ export default function QuestionsContainer({ results }) {
   // this jsx have an condition
   // if  the currentQuestions is equall into the array length of results then the first one is execute
   return currentQuestions + 1 === results.length ? (
-    <ShowResults showResults={score} />
+    <ShowResults showResults={score} lengthOfArray={results.length}/>
   ) : (
     <div className="max-w-[800px] mx-auto bg-white px-[15px] sm:px-[40px] py-[30px] mt-[100px]">
       <div className="flex justify-between items-center">
