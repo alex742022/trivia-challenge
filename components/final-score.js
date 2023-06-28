@@ -4,6 +4,7 @@ import he from "he";
 import Logo2 from "../public/images/logo/logo_zeniark2.png";
 import CheckIcon from "../public/images/icons/check-green.svg";
 import XIcon from "../public/images/icons/xmark-red.svg";
+import Link from "next/link";
 //these all property are came from show-results component"
 export default function FinalScore({
   finalScore,
@@ -87,6 +88,16 @@ export default function FinalScore({
             </div>
           );
         })}
+      </div>
+      <hr className="h-[2px]" />
+      <div className="flex flex-col items-center mt-[50px]">
+        <Link
+          href="/"
+          className="uppercase mx-auto brandColorText font-semibold text-[30px]"
+        >
+          Play again
+        </Link>
+        <div className="brandColorBackground h-[4px] w-[200px]"></div>
       </div>
     </div>
   );
