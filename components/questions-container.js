@@ -7,6 +7,8 @@ import XIcon from "../public/images/icons/xmark.svg";
 import ShowResults from "./show-results";
 import Logo2 from "../public/images/logo/logo_zeniark2.png";
 
+import he from "he";
+
 // "results" came from questions file which have a data array
 export default function QuestionsContainer({ results }) {
   // this state is to display the index of array results
@@ -46,7 +48,7 @@ export default function QuestionsContainer({ results }) {
       <hr className="h-[2px] my-[20px]" />
       <div className="m-auto w-[70%] h-[400px] bg-slate-200 flex items-center">
         <h1 className="text-[50px] text-center">
-          {results[currentQuestions].question}
+        {he.decode(results[currentQuestions].question)}
         </h1>
       </div>
       <hr className="h-[2px] my-[20px]" />
