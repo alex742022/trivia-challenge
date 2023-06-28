@@ -11,8 +11,6 @@ export default function FinalScore({
   allDataResults,
   answeredOfUser,
 }) {
-  console.log(allDataResults);
-  console.log(answeredOfUser);
   return (
     <div className="max-w-[600px] relative mx-auto bg-white px-[15px] py-[20px] sm:py-[30px] sm:px-[50px] mt-[100px]">
       <Image
@@ -70,10 +68,18 @@ export default function FinalScore({
                 </div>
                 <div>
                   <Image
-                    src={answeredOfUser[index] === correct_answer ? CheckIcon : XIcon}
+                    src={
+                      answeredOfUser[index] === correct_answer
+                        ? CheckIcon
+                        : XIcon
+                    }
                     width={30}
                     height={30}
-                    alt={answeredOfUser[index] === correct_answer ? "Check" : "Wrong"}
+                    alt={
+                      answeredOfUser[index] === correct_answer
+                        ? "Check"
+                        : "Wrong"
+                    }
                     className="w-[20px]"
                   />
                 </div>
