@@ -11,7 +11,7 @@ export default function HomeScreen({ DataofTrivia }) {
     <div>
       <div className="bg-white max-w-[900px] mx-auto p-[20px] flex flex-col items-center rounded-lg ">
         <Image
-          src="/../public/images/logo_zeniark.png"
+          src="/../public/images/logo/logo_zeniark.png"
           alt="Logo"
           width={300}
           height={100}
@@ -26,7 +26,7 @@ export default function HomeScreen({ DataofTrivia }) {
           Can you score {lengthOfArray}/{lengthOfArray}?
         </div>
         <Link
-          href="#"
+          href="/question"
           className="uppercase text-[brandColor1] text-[25px] mt-[20px]"
         >
           Lets start!
