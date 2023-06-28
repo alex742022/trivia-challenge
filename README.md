@@ -1,5 +1,5 @@
 # Project Name
-This is the README file for the Project Name project.
+Trivia Challenge
 
 ## Installation
 To run this project on your local machine, follow these steps:
