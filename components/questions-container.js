@@ -3,7 +3,8 @@ import Image from "next/image";
 //import Svg from public file
 import CheckIcon from "../public/images/icons/check.svg";
 import XIcon from "../public/images/icons/xmark.svg";
-import { unstable_renderSubtreeIntoContainer } from "react-dom";
+// imported this component to pass a final results
+import ShowResults from "./show-results";
 
 // "results" came from questions file which have a data array
 export default function QuestionsContainer({ results }) {
@@ -11,15 +12,20 @@ export default function QuestionsContainer({ results }) {
   const [currentQuestions, setCurrentQuestions] = useState(0);
   // this is state numbers that hold a scores
   const [score, setScores] = useState(0);
-  console.log(`Scores ${score}`);
-  console.log(currentQuestions);
+
+  // this function is for the button of true or false
   const handleAnswer = (answer) => {
     //to changed the questions
     currentQuestions + 1 < results.length &&
       setCurrentQuestions(currentQuestions + 1);
     answer === results[currentQuestions].correct_answer && setScores(score + 1);
   };
-  return (
+
+  // this jsx have an condition
+  // if  the currentQuestions is equall into the array length of results then the first one is execute
+  return currentQuestions + 1 === results.length ? (
+    <ShowResults showResults={score} />
+  ) : (
     <div className="w-[900px] h-[800px] bg-white px-[50px] py-[30px]">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-[20px]">
