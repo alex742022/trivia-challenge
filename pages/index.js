@@ -15,6 +15,7 @@ export default function HomeScreen({ DataofTrivia }) {
           alt="Logo"
           width={300}
           height={100}
+          className="w-auto"
         />
         <h1 className="text-[30px] text-center font-[700] mt-[20px]">
           Welcome to the Trivia Challenge!
@@ -26,7 +27,7 @@ export default function HomeScreen({ DataofTrivia }) {
           Can you score {lengthOfArray}/{lengthOfArray}?
         </div>
         <Link
-          href="/question"
+          href="/question/s"
           className="uppercase text-[brandColor1] text-[25px] mt-[20px]"
         >
           Lets start!
