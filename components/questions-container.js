@@ -1,5 +1,6 @@
 import Image from "next/image";
-// import CheckIcon from "../public/images/icons"
+import CheckIcon from "../public/images/icons/check.svg";
+import XIcon from "../public/images/icons/xmark.svg";
 export default function QuestionsContainer() {
   return (
     <div className="w-[900px] h-[700px] bg-white px-[50px] py-[30px]">
@@ -7,9 +8,10 @@ export default function QuestionsContainer() {
         <div className="flex items-center gap-[20px]">
           <Image
             src="/../public/images/logo/logo_zeniark2.png"
-            width={60}
+            width={80}
             height={60}
             alt="Logo"
+            className="w-auto"
           />
           <h2>Category:</h2>
         </div>
@@ -22,9 +24,27 @@ export default function QuestionsContainer() {
         </h1>
       </div>
       <hr className="h-[2px] mt-[20px]" />
-      <div>
-        <button className="bg-[green] py-[10px]">True</button>
-        <button className="bg-[red]">False</button>
+      <div className="text-white">
+        <button className="bg-[green] py-[10px] flex items-center gap-[15px]">
+          <Image
+            src={CheckIcon}
+            width={20}
+            height={20}
+            alt="checkIcon"
+            className="w-auto"
+          />
+          True
+        </button>
+        <button className="bg-[red] py-[10px] flex items-center gap-[15px]">
+          <Image
+            src={XIcon}
+            width={20}
+            height={20}
+            alt="checkIcon"
+            className="w-auto"
+          />
+          False
+        </button>
       </div>
     </div>
   );
