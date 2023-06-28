@@ -17,14 +17,17 @@ git clone https://github.com/your-username/repository-name.git
 Replace your-username with your GitHub username and repository-name with the name of the project's repository.
 
 Navigate to the project's directory:
-
+```bash
 cd repository-name
+```
 Install the project dependencies by running the following command:
-
+```bash
 npm install
+```
 This command will install all the required dependencies listed in the package.json file.
 
 Once the installation is complete, you can start the project by running the following command:
-
+```bash
 npm run dev
+```
 This command will start the development server and make the project accessible in your browser at http://localhost:3000.
