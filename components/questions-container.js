@@ -29,9 +29,9 @@ export default function QuestionsContainer({ results }) {
   return currentQuestions + 1 === results.length ? (
     <ShowResults showResults={score} />
   ) : (
-    <div className="max-w-[800px] mx-auto bg-white px-[50px] py-[30px] mt-[100px]">
+    <div className="max-w-[800px] mx-auto bg-white px-[15px] sm:px-[40px] py-[30px] mt-[100px]">
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-[20px]">
+        <div className="flex items-center gap-[20px] sm:gap-[30px]">
           <Image
             src={Logo2}
             width={100}
@@ -39,7 +39,7 @@ export default function QuestionsContainer({ results }) {
             alt="Logo"
             className="w-[40px] sm:w-[80px]"
           />
-          <h2 className="text-[20px] sm:text-[30px]">Category: {results[currentQuestions].category}</h2>
+          <h2 className="sm:text-[20px]  w-[150px]">Category: <span className="font-semibold">{results[currentQuestions].category}</span></h2>
         </div>
         <small className="text-[15px] sm:text-[20px]">
           {currentQuestions + 1} of {results.length}
