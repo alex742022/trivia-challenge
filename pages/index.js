@@ -3,7 +3,7 @@ import Link from "next/link";
 import DataofTrivia from "./api/test-questions.json";
 import Image from "next/image";
 
-export default function HomeScreen({ DataofTrivia }) {
+export default function HomeScreen() {
   //Destructuting the Data
   const { results } = DataofTrivia;
   const lengthOfArray = results.length;
@@ -38,15 +38,15 @@ export default function HomeScreen({ DataofTrivia }) {
 }
 
 //SSR
-export async function getServerSideProps() {
-  if (!DataofTrivia) {
-    return {
-      props: {},
-    };
-  }
-  return {
-    props: {
-      DataofTrivia,
-    },
-  };
-}
+// export async function getServerSideProps() {
+//   if (!DataofTrivia) {
+//     return {
+//       props: {},
+//     };
+//   }
+//   return {
+//     props: {
+//       DataofTrivia,
+//     },
+//   };
+// }
