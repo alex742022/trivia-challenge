@@ -2,7 +2,8 @@
 import Link from "next/link";
 import DataofTrivia from "./api/test-questions.json";
 import Image from "next/image";
-
+//import the logo
+import Logo from "../public/images/logo/logo_zeniark.png"
 export default function HomeScreen() {
   //Destructuting the Data
   const { results } = DataofTrivia;
@@ -11,7 +12,7 @@ export default function HomeScreen() {
     <div>
       <div className="bg-white max-w-[900px] mx-auto p-[20px] flex flex-col items-center rounded-lg ">
         <Image
-          src="/../public/images/logo/logo_zeniark.png"
+          src={Lgog}
           alt="Logo"
           width={300}
           height={100}
