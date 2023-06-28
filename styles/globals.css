@@ -10,6 +10,13 @@ html,
 *::after {
   font-family: "Inter", "Poppins", sans-serif;
 }
-.brandColor1{
+.brandColorText{
+    color: #085695;
+}
+.brandColorBackground{
     background-color:  #085695;
+
+}
+body{
+ background-color: green;
 }
