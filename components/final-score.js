@@ -1,11 +1,12 @@
 
 //this property "finalScore came from final-results page"
 import Image from "next/image"
+import Logo2 from "../public/images/logo/logo_zeniark2.png"
 export default function FinalScore({finalScore}) {
   return (
     <div className="w-[900px] relative mx-auto bg-white py-[30px] px-[50px]">
     <Image
-      src="/../public/images/logo/logo_zeniark2.png"
+      src={Logo2}
       width={100}
       height={100}
       alt="Logo"
