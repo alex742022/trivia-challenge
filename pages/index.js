@@ -12,7 +12,7 @@ export default function HomeScreen() {
     <div>
       <div className="bg-white max-w-[900px] mx-auto p-[20px] flex flex-col items-center rounded-lg ">
         <Image
-          src={Lgog}
+          src={Logo}
           alt="Logo"
           width={300}
           height={100}
