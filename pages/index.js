@@ -27,7 +27,7 @@ export default function HomeScreen({ DataofTrivia }) {
           Can you score {lengthOfArray}/{lengthOfArray}?
         </div>
         <Link
-          href="/question"
+          href="/questions"
           className="uppercase text-[brandColor1] text-[25px] mt-[20px]"
         >
           Lets start!
