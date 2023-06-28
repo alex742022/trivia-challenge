@@ -37,13 +37,13 @@ export default function QuestionsContainer({ results }) {
             width={100}
             height={100}
             alt="Logo"
-            className="w-[80px]"
+            className="w-[40px] sm:w-[80px]"
           />
-          <h2>Category:{results[currentQuestions].category}</h2>
+          <h2 className="text-[20px] sm:text-[30px]">Category: {results[currentQuestions].category}</h2>
         </div>
-        <div>
+        <small className="text-[15px] sm:text-[20px]">
           {currentQuestions + 1} of {results.length}
-        </div>
+        </small>
       </div>
       <hr className="h-[2px] my-[20px]" />
       <div className="m-auto max-w-[600px]] h-[400px] bg-slate-200 flex justify-center items-center p-[20px]">
