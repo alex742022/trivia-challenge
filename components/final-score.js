@@ -36,7 +36,7 @@ export default function FinalScore({
         {indexQuestion.map((indexNumber, index) => {
           return (
             indexNumber < allDataResults.length && (
-              <div className="my-[10px]">
+              <div className="my-[10px]" key={index}>
                 <hr className="h-[2px]" />
                 <div className="flex justify-between gap-[20px] items-center">
                   <div className="w-[80%]">
