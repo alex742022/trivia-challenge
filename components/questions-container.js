@@ -56,10 +56,16 @@ export default function QuestionsContainer({ results }) {
   // if  the currentQuestions is equall into the array length of results then the first one is execute
   return showTheResults ? (
     <ShowResults
+    //this is the score
       showResults={score}
+      //length of results data array which are questions
       lengthOfArray={results.length}
+      //this is the results array with a data array
       allDataResults={results}
+      //these are the answered of user stored in state array
       answeredOfUser={answerOfUser}
+      //these are the index numbers stored in state array came from math random method to i dentify which question should display on the results components
+      indexQuestion = {currentQuestionsIndex}
     />
   ) : (
     randomQuestion && (
