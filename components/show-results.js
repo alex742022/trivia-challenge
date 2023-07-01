@@ -6,7 +6,8 @@ export default function FinalResultsContainer({
   showResults,
   lengthOfArray,
   allDataResults,
-  answeredOfUser
+  answeredOfUser,
+  indexQuestion
 }) {
   const [showNotif, setShowNotif] = useState(true);
   const showTheResult = () => {
@@ -24,6 +25,6 @@ export default function FinalResultsContainer({
     </div>
   ) : (
     //past the property into final score component
-    <FinalScore finalScore={showResults} lengthOfArray={lengthOfArray} allDataResults={allDataResults} answeredOfUser={answeredOfUser}/>
+    <FinalScore finalScore={showResults} lengthOfArray={lengthOfArray} allDataResults={allDataResults} answeredOfUser={answeredOfUser} indexQuestion={indexQuestion}/>
   );
 }
